@@ -116,8 +116,8 @@ const boats = [
         price: '2.650.000',
         gallery: [
             { name: 'Master Room', price: 'Rp 3.850.000', url: '/boats/northblue-master-room.jpg' },
-            { name: 'Sharing Room 1', price: 'Mulai Rp 2.650.000', url: '/boats/northblue-sharing-room.jpg' },
-            { name: 'Sharing Room 2', price: 'Mulai Rp 2.650.000', url: '/boats/northblue-sharing-room-2.jpg' }
+            { name: 'Sharing Room 1 (Private Bathroom)', price: 'Mulai Rp 2.650.000', url: '/boats/northblue-sharing-room.jpg' },
+            { name: 'Sharing Room 2 (Sharing Bathroom)', price: 'Mulai Rp 2.650.000', url: '/boats/northblue-sharing-room-2.jpg' }
         ],
         facilitiesList: ['Master Room', 'Sharing Rooms', 'Dining Area', 'Sun Deck', 'Karaoke'],
         facilityImages: [
@@ -127,8 +127,8 @@ const boats = [
         ],
         roomPrices: [
             { type: 'Master Room', price: 'Rp 3.850.000' },
-            { type: 'Sharing 4P', price: 'Rp 2.850.000' },
-            { type: 'Sharing 6P', price: 'Rp 2.650.000' }
+            { type: 'Sharing 4P (Private Bathroom)', price: 'Rp 2.850.000' },
+            { type: 'Sharing 6P (Sharing Bathroom)', price: 'Rp 2.650.000' }
         ]
     },
     {
@@ -180,7 +180,6 @@ const boats = [
         facilitiesList: [
             'Premium Suites',
             'Ensuite Bathrooms',
-            'Jacuzzi',
             'Fine Dining',
             'Water Activities'
         ],
