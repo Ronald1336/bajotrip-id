@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Catalog from './components/Catalog'
 import GlobalInfoSection from './components/GlobalInfoSection'
@@ -7,6 +8,7 @@ import FloatingWhatsApp from './components/FloatingWhatsApp'
 function App() {
   return (
     <div className="font-sans text-slate-800 bg-slate-50 min-h-screen relative">
+      <Navbar />
       <Hero />
       <Catalog />
       <GlobalInfoSection />
