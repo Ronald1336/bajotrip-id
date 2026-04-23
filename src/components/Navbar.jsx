@@ -47,35 +47,10 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex items-center space-x-8">
                     <a href="#" className={navLinkClass}>HOME</a>
-                    <a href="#" className={navLinkClass}>ABOUT</a>
+                    <a href="#about" className={navLinkClass}>ABOUT</a>
                     <a href="#catalog" className={navLinkClass}>OUR BOATS</a>
-                    
-                    {/* Dropdown */}
-                    <div 
-                        className="relative"
-                        onMouseEnter={() => setIsDropdownOpen(true)}
-                        onMouseLeave={() => setIsDropdownOpen(false)}
-                    >
-                        <button className={`${navLinkClass} flex items-center gap-1 focus:outline-none`}>
-                            TOUR PROGRAM
-                            <svg className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        
-                        {/* Dropdown Menu */}
-                        <div 
-                            className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-200 origin-top-left ${
-                                isDropdownOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'
-                            }`}
-                        >
-                            <a href="#" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-ocean transition-colors border-b border-slate-50">1D Trip</a>
-                            <a href="#" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-ocean transition-colors border-b border-slate-50">2D1N Trip</a>
-                            <a href="#" className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-ocean transition-colors">3D2N Trip</a>
-                        </div>
-                    </div>
-
-                    <a href="#info-section" className={navLinkClass}>TERMS & CONDITIONS</a>
+                    <a href="#itinerary" className={navLinkClass}>TOUR PROGRAM</a>
+                    <a href="#terms" className={navLinkClass}>TERMS & CONDITIONS</a>
                     
                     {/* Contact Button */}
                     <a 
@@ -117,19 +92,10 @@ export default function Navbar() {
             >
                 <div className="flex flex-col py-4 px-4 space-y-2">
                     <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">HOME</a>
-                    <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">ABOUT</a>
+                    <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">ABOUT</a>
                     <a href="#catalog" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">OUR BOATS</a>
-                    
-                    <div className="px-4 py-2">
-                        <div className="text-slate-400 font-bold text-xs uppercase tracking-wider mb-2">TOUR PROGRAM</div>
-                        <div className="flex flex-col space-y-1 pl-4 border-l-2 border-slate-100">
-                            <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-slate-600 text-sm hover:text-ocean">1D Trip</a>
-                            <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-slate-600 text-sm hover:text-ocean">2D1N Trip</a>
-                            <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-slate-600 text-sm hover:text-ocean">3D2N Trip</a>
-                        </div>
-                    </div>
-
-                    <a href="#info-section" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TERMS & CONDITIONS</a>
+                    <a href="#itinerary" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TOUR PROGRAM</a>
+                    <a href="#terms" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TERMS & CONDITIONS</a>
                     
                     <div className="px-4 py-4 mt-2 border-t border-slate-100">
                         <a 

@@ -167,6 +167,52 @@ export default function BoatCard({ boat }) {
                                 )}
                             </div>
 
+                            {/* Price Policy Section */}
+                            {(boat.include?.length > 0 || boat.exclude?.length > 0) && (
+                                <div className="mt-8 border-t border-slate-100 pt-8">
+                                    <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+                                        <span className="w-8 h-1 bg-ocean rounded-full"></span>
+                                        Price Policy
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        {/* Include */}
+                                        {boat.include && boat.include.length > 0 && (
+                                            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                                <h4 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                                    <FaCheckCircle className="text-green-500" />
+                                                    Include
+                                                </h4>
+                                                <ul className="space-y-3">
+                                                    {boat.include.map((item, idx) => (
+                                                        <li key={idx} className="flex items-start text-slate-700 text-sm">
+                                                            <FaCheckCircle className="text-green-500 mt-1 mr-3 flex-shrink-0" />
+                                                            <span>{item}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                        {/* Exclude */}
+                                        {boat.exclude && boat.exclude.length > 0 && (
+                                            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                                <h4 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                                                    <FaTimes className="text-red-500" />
+                                                    Exclude
+                                                </h4>
+                                                <ul className="space-y-3">
+                                                    {boat.exclude.map((item, idx) => (
+                                                        <li key={idx} className="flex items-start text-slate-700 text-sm">
+                                                            {idx < 4 ? <FaTimes className="text-red-400 mt-1 mr-3 flex-shrink-0" /> : <div className="w-4 mr-3 flex-shrink-0"></div>}
+                                                            <span>{item}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
                             {/* WhatsApp Call-to-action */}
                             <div className="pt-4 text-center mt-8">
                                 <a 

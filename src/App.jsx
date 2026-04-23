@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Catalog from './components/Catalog'
-import GlobalInfoSection from './components/GlobalInfoSection'
+import ItinerarySection from './components/ItinerarySection'
+import TermsSection from './components/TermsSection'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <Navbar />
       <Hero />
       <Catalog />
-      <GlobalInfoSection />
+      <ItinerarySection />
+      <TermsSection />
 
       {/* Simple Footer */}
       <footer className="bg-ocean-deep text-slate-300 py-12 text-center mt-12">

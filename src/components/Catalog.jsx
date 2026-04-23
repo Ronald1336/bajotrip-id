@@ -1,6 +1,24 @@
 import React from 'react';
 import BoatCard from './BoatCard';
 
+const baseInclude = [
+    <><span className="font-bold">Airport / Hotel Transfer 2x</span> (Pick up before trip & Drop off after trip)</>,
+    <><span className="font-bold">Food</span> during the trip</>,
+    <><span className="font-bold">snacks, tea, coffee, and drinks</span> (milk, juice, and minerals)</>,
+    <><span className="font-bold">Full Documentation</span> (Mirrorless, Drone, Gopro)</>,
+    <span className="font-bold">Tour Guide</span>,
+    <span className="font-bold">Snorkeling Gears</span>
+];
+
+const baseExclude = [
+    <span className="font-bold">Flight ticket</span>,
+    <><span className="font-bold">Hotels</span> before and after trip</>,
+    <span className="font-bold">Tips Guide</span>,
+    <><span className="font-bold">Entrance fee</span> (Komodo National Park)</>,
+    <><span className="font-bold ml-4 text-slate-500">Foreigner :</span> <span className="text-slate-500">650k</span></>,
+    <><span className="font-bold ml-4 text-slate-500">Locals :</span> <span className="text-slate-500">350k</span></>
+];
+
 const boats = [
     {
         id: 1,
@@ -12,6 +30,8 @@ const boats = [
         cabins: 7,
         speed: 10,
         price: '3.550.000',
+        include: baseInclude,
+        exclude: baseExclude,
         gallery: [
             { name: 'Royal Suite Balcony', price: 'Rp 6.050.000', url: '/boats/blackbeard-royal-suite.jpg' },
             { name: 'Panoramic Suite Balcony', price: 'Rp 5.750.000', url: '/boats/blackbeard-panoramic-room.jpg' },
@@ -49,6 +69,8 @@ const boats = [
         cabins: 12,
         speed: 10,
         price: '4.000.000',
+        include: baseInclude,
+        exclude: baseExclude,
         gallery: [
             { name: 'Atlantic Room', price: 'Rp 8.500.000', url: '/boats/atlantic.jpg' },
             { name: 'Oceanic Room', price: 'Rp 7.000.000', url: '/boats/oceanic.jpg' },
@@ -80,6 +102,8 @@ const boats = [
         cabins: 6,
         speed: 9,
         price: '3.550.000',
+        include: baseInclude,
+        exclude: baseExclude,
         gallery: [
             { name: 'Panoramic Suite Upper Deck', url: '/boats/panoramic-suites-upper-deck.jpg' },
             { name: 'Panoramic Suite Main Deck', url: '/boats/panoramic-suites-main-deck.jpg' },
@@ -114,6 +138,8 @@ const boats = [
         cabins: 5,
         speed: 10,
         price: '2.650.000',
+        include: baseInclude,
+        exclude: baseExclude,
         gallery: [
             { name: 'Master Room', price: 'Rp 3.850.000', url: '/boats/northblue-master-room.jpg' },
             { name: 'Sharing Room 1 (Private Bathroom)', price: 'Mulai Rp 2.650.000', url: '/boats/northblue-sharing-room.jpg' },
@@ -141,6 +167,8 @@ const boats = [
         cabins: 5,
         speed: 9,
         price: '3.000.000',
+        include: baseInclude,
+        exclude: baseExclude,
         gallery: [
             { name: 'Deluxe Room Ocean View 1', price: 'Rp 4.000.000', url: '/boats/deluxe-room-1.jpg' },
             { name: 'Deluxe Room Ocean View 2', price: 'Rp 4.000.000', url: '/boats/deluxe-room-2.jpg' },
@@ -171,6 +199,8 @@ const boats = [
         cabins: 4,
         speed: 11,
         price: '3.700.000',
+        include: baseInclude,
+        exclude: baseExclude,
         gallery: [
             { name: 'Phoenix Room (VVIP)', price: 'Rp 7.500.000', url: '/boats/rajabintang-phoenix-room.jpg' },
             { name: 'Earth Room', price: 'Rp 6.250.000', url: '/boats/rajabintang-earth-room.jpg' },
