@@ -4,18 +4,22 @@ import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
+import TourProgram from './components/TourProgram'
+import TermsConditions from './components/TermsConditions'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="font-sans text-slate-800 bg-slate-50 min-h-screen relative">
+      <div className="font-sans text-slate-800 bg-slate-50 min-h-screen relative flex flex-col">
         <Navbar />
         
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/tour-program" element={<TourProgram />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
         </Routes>
 
         {/* Simple Footer */}

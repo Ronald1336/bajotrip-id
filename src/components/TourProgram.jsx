@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function ItinerarySection() {
+export default function TourProgram() {
     return (
-        <section id="itinerary" className="py-20 bg-slate-100">
+        <div className="pt-32 pb-20 bg-slate-100 min-h-screen">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-sm font-bold text-ocean uppercase tracking-widest mb-2">The Journey</h2>
@@ -121,6 +121,6 @@ export default function ItinerarySection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

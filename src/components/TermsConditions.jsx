@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function TermsSection() {
+export default function TermsConditions() {
     return (
-        <section id="terms" className="py-20 bg-slate-50">
+        <div className="pt-32 pb-20 bg-slate-50 min-h-screen">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-sm font-bold text-ocean uppercase tracking-widest mb-2">Important Information</h2>
@@ -42,6 +42,6 @@ export default function TermsSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

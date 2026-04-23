@@ -50,8 +50,8 @@ export default function Navbar() {
                     <Link to="/" className={navLinkClass}>HOME</Link>
                     <Link to="/about" className={navLinkClass}>ABOUT</Link>
                     <Link to="/#catalog" className={navLinkClass}>OUR BOATS</Link>
-                    <Link to="/#itinerary" className={navLinkClass}>TOUR PROGRAM</Link>
-                    <Link to="/#terms" className={navLinkClass}>TERMS & CONDITIONS</Link>
+                    <Link to="/tour-program" className={navLinkClass}>TOUR PROGRAM</Link>
+                    <Link to="/terms-conditions" className={navLinkClass}>TERMS & CONDITIONS</Link>
                     
                     {/* Contact Button */}
                     <a 
@@ -95,8 +95,8 @@ export default function Navbar() {
                     <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">HOME</Link>
                     <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">ABOUT</Link>
                     <Link to="/#catalog" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">OUR BOATS</Link>
-                    <Link to="/#itinerary" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TOUR PROGRAM</Link>
-                    <Link to="/#terms" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TERMS & CONDITIONS</Link>
+                    <Link to="/tour-program" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TOUR PROGRAM</Link>
+                    <Link to="/terms-conditions" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TERMS & CONDITIONS</Link>
                     
                     <div className="px-4 py-4 mt-2 border-t border-slate-100">
                         <a 

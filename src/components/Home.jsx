@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from './Hero';
 import Catalog from './Catalog';
-import ItinerarySection from './ItinerarySection';
-import TermsSection from './TermsSection';
 
 export default function Home() {
   const { hash } = useLocation();
@@ -24,8 +22,6 @@ export default function Home() {
     <>
       <Hero />
       <Catalog />
-      <ItinerarySection />
-      <TermsSection />
     </>
   );
 }
