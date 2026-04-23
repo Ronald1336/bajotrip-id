@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const { pathname } = useLocation();
+
+    const isHomePage = pathname === '/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,23 +21,25 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Text color changes depending on scroll state on desktop
+    const isSolid = !isHomePage || isScrolled;
+
+    // Text color changes depending on solid state on desktop
     const navLinkClass = `font-semibold text-sm tracking-wide transition-colors duration-300 ${
-        isScrolled ? 'text-slate-700 hover:text-ocean' : 'text-white/90 hover:text-white drop-shadow-md'
+        isSolid ? 'text-slate-700 hover:text-ocean' : 'text-white/90 hover:text-white drop-shadow-md'
     }`;
 
-    // Logo color changes depending on scroll state
+    // Logo color changes depending on solid state
     const logoClass = `text-2xl md:text-3xl font-black tracking-tighter transition-colors duration-300 ${
-        isScrolled ? 'text-slate-800' : 'text-white drop-shadow-md'
+        isSolid ? 'text-slate-800' : 'text-white drop-shadow-md'
     }`;
     const logoDotClass = `transition-colors duration-300 ${
-        isScrolled ? 'text-ocean' : 'text-cyan-400'
+        isSolid ? 'text-ocean' : 'text-cyan-400'
     }`;
 
     return (
         <nav
             className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-                isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
+                isSolid ? 'bg-white shadow-sm border-b border-slate-100 py-4' : 'bg-transparent py-6'
             }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -59,7 +63,7 @@ export default function Navbar() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 transform hover:-translate-y-0.5 ${
-                            isScrolled 
+                            isSolid 
                                 ? 'bg-ocean text-white shadow-lg shadow-ocean/30 hover:bg-ocean-dark' 
                                 : 'bg-white/20 backdrop-blur-md border border-white/40 text-white hover:bg-white/30'
                         }`}
@@ -72,7 +76,7 @@ export default function Navbar() {
                 <div className="lg:hidden">
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className={`p-2 rounded-md focus:outline-none ${isScrolled ? 'text-slate-800' : 'text-white'}`}
+                        className={`p-2 rounded-md focus:outline-none ${isSolid ? 'text-slate-800' : 'text-white'}`}
                     >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             {isMobileMenuOpen ? (
