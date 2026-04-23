@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -40,17 +41,17 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
                 
                 {/* Logo */}
-                <a href="#" className={logoClass}>
+                <Link to="/" className={logoClass}>
                     TripBajo<span className={logoDotClass}>.id</span>
-                </a>
+                </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex items-center space-x-8">
-                    <a href="#" className={navLinkClass}>HOME</a>
-                    <a href="#about" className={navLinkClass}>ABOUT</a>
-                    <a href="#catalog" className={navLinkClass}>OUR BOATS</a>
-                    <a href="#itinerary" className={navLinkClass}>TOUR PROGRAM</a>
-                    <a href="#terms" className={navLinkClass}>TERMS & CONDITIONS</a>
+                    <Link to="/" className={navLinkClass}>HOME</Link>
+                    <Link to="/about" className={navLinkClass}>ABOUT</Link>
+                    <Link to="/#catalog" className={navLinkClass}>OUR BOATS</Link>
+                    <Link to="/#itinerary" className={navLinkClass}>TOUR PROGRAM</Link>
+                    <Link to="/#terms" className={navLinkClass}>TERMS & CONDITIONS</Link>
                     
                     {/* Contact Button */}
                     <a 
@@ -91,11 +92,11 @@ export default function Navbar() {
                 }`}
             >
                 <div className="flex flex-col py-4 px-4 space-y-2">
-                    <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">HOME</a>
-                    <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">ABOUT</a>
-                    <a href="#catalog" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">OUR BOATS</a>
-                    <a href="#itinerary" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TOUR PROGRAM</a>
-                    <a href="#terms" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TERMS & CONDITIONS</a>
+                    <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">HOME</Link>
+                    <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">ABOUT</Link>
+                    <Link to="/#catalog" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">OUR BOATS</Link>
+                    <Link to="/#itinerary" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TOUR PROGRAM</Link>
+                    <Link to="/#terms" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 font-medium hover:bg-slate-50 hover:text-ocean rounded-lg">TERMS & CONDITIONS</Link>
                     
                     <div className="px-4 py-4 mt-2 border-t border-slate-100">
                         <a 

@@ -1,27 +1,31 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Catalog from './components/Catalog'
-import ItinerarySection from './components/ItinerarySection'
-import TermsSection from './components/TermsSection'
+import Home from './components/Home'
+import About from './components/About'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
   return (
-    <div className="font-sans text-slate-800 bg-slate-50 min-h-screen relative">
-      <Navbar />
-      <Hero />
-      <Catalog />
-      <ItinerarySection />
-      <TermsSection />
+    <Router>
+      <ScrollToTop />
+      <div className="font-sans text-slate-800 bg-slate-50 min-h-screen relative">
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
 
-      {/* Simple Footer */}
-      <footer className="bg-ocean-deep text-slate-300 py-12 text-center mt-12">
-        <p className="text-sm">© {new Date().getFullYear()} Open Trip Labuan Bajo. All Rights Reserved.</p>
-      </footer>
+        {/* Simple Footer */}
+        <footer className="bg-ocean-deep text-slate-300 py-12 text-center mt-auto">
+          <p className="text-sm">© {new Date().getFullYear()} Open Trip Labuan Bajo. All Rights Reserved.</p>
+        </footer>
 
-      <FloatingWhatsApp />
-    </div>
+        <FloatingWhatsApp />
+      </div>
+    </Router>
   )
 }
 
